@@ -1,0 +1,9 @@
+{% extends "page_base.html" %}
+{% import "_macros.html" as macros %}
+{% block page_content %}
+<h1 class="mt-5">Job Infos</h1>
+{{ macros.pagination_widget(pages, 'index') }}
+{% for d in data_to_show %}
+{{d}}<br>
+{% endfor%}
+{% endblock %}
